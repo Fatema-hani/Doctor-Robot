@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/cardiogram.png')}}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="{{url_for('index')}}">Medlab</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="{{url_for('index')}}">Home</a></li>
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+
+
+  </div>
+</header>
+<!-- End Header -->
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <div class="container">
+
+    <form class="well form-horizontal" action="/parkinson_result" method="post">
+
+
+    <!-- Form Name -->
+    <br>
+    <br>
+    <br>
+    <legend><center><h2><b>Diagnosis Form</b></h2></center></legend><br>
+
+    <div class="form-group row">
+      <label class="col-md-2 control-label">MDVP_Fo_Hz</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="MDVP_Fo_Hz" placeholder="MDVP_Fo_Hz" class="form-control"  type="text" value="119.992">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_Fhi_Hz</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_Fhi_Hz" placeholder="MDVP_Fhi_Hz" class="form-control"  type="text" value="157.302">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_Flo_Hz</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_Flo_Hz" placeholder="MDVP_Flo_Hz" class="form-control"  type="text" value="74.997">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_Jitter</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_Jitter" placeholder="MDVP_Jitter" class="form-control"  type="text" value="0.00784">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_Jitter_Abs</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_Jitter_Abs" placeholder="MDVP_Jitter_Abs" class="form-control"  type="text" value="0.00007">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_RAP</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_RAP" placeholder="MDVP_RAP" class="form-control"  type="text" value="0.0037">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_PPQ</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_PPQ" placeholder="MDVP_PPQ" class="form-control"  type="text" value="0.00554">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >Jitter_DDP</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="Jitter_DDP" placeholder="Jitter_DDP" class="form-control"  type="text" value="0.01109">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_Shimmer</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_Shimmer" placeholder="MDVP_Shimmer" class="form-control"  type="text" value="0.04374">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_Shimmer_dB</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_Shimmer_dB" placeholder="MDVP_Shimmer_dB" class="form-control"  type="text" value="0.426">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >Shimmer_APQ3</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="Shimmer_APQ3" placeholder="Shimmer_APQ3" class="form-control"  type="text" value="0.02182">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >Shimmer_APQ5</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="Shimmer_APQ5" placeholder="Shimmer_APQ5" class="form-control"  type="text" value="0.0313">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >MDVP_APQ</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="MDVP_APQ" placeholder="MDVP_APQ" class="form-control"  type="text" value="0.02971">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >Shimmer_DDA</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="Shimmer_DDA" placeholder="Shimmer_DDA" class="form-control"  type="text" value="0.06545">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >NHR</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="NHR" placeholder="NHR" class="form-control"  type="text" value="0.02211">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >HNR</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="HNR" placeholder="HNR" class="form-control"  type="text" value="21.033">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >RPDE</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="RPDE" placeholder="RPDE" class="form-control"  type="text" value="0.414783">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >DFA</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="DFA" placeholder="DFA" class="form-control"  type="text" value="0.815285">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >spread1</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="spread1" placeholder="spread1" class="form-control"  type="text" value="-4.813031">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >spread2</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="spread2" placeholder="spread2" class="form-control"  type="text" value="0.266482">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >D2</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="D2" placeholder="D2" class="form-control"  type="text" value="2.301442">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2 control-label" >PPE</label>
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="PPE" placeholder="PPE" class="form-control"  type="text" value="0.284654">
+        </div>
+      </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-warning col-md-4 m-4 ml-3" > SUBMIT <span class="glyphicon glyphicon-send"></span></button>
+
+    </form>
+    </div>
+    </div>
+    <!-- /.container -->
+
+  </main><!-- End #main -->
+
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ 
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/purecounter/purecounter.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+</body>
+
+</html>
